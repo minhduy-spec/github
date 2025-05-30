@@ -1,0 +1,31 @@
+#câu 1
+#!/bin/bash
+
+# Kiểm tra số lượng tham số
+if [ $# -ne 2 ]; then
+  echo "Sử dụng: $0 <chuỗi> <số_lần>"
+  exit 1
+fi
+
+# Lấy tham số
+str=$1
+n=$2
+
+# Kiểm tra tham số thứ hai có phải là số nguyên không
+if ! [[ "$n" =~ ^[0-9]+$ ]]; then
+  echo "Tham số thứ hai phải là mộtố nguyên."
+  exit 1
+fi
+
+# In chuỗi str n lần
+for (( i=1; i<=n; i++ ))
+do
+  echo -n "$str"  # In chuỗi không xuống dòng
+done
+echo ""  # Xuống dòng sau khi in xong
+
+
+#Câu 2
+ajsbdhgvsfjbwaeugfuyawbefysdjfbyeuwbfhgsafadsf
+mansdcbasuyulvbahewvuybasdyvbsauyasdasd
+
